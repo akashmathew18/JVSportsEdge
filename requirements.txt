@@ -1,0 +1,11 @@
+Django>=5.1.7
+djangorestframework>=3.14
+django-cors-headers>=4.3
+django-environ>=0.11
+djangorestframework-simplejwt>=5.3
+Pillow>=10.0
+whitenoise>=6.6
+psycopg2-binary>=2.9  # If using PostgreSQL (remove if using SQLite)
+gunicorn>=21.2  # Required for deployment
+stripe>=7.9  # Payment integration for registrations & fines
+drf-yasg>=1.21  # API documentation (Swagger)

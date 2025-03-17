@@ -1,0 +1,62 @@
+{% extends 'jvsportsedge_app/base.html' %}
+
+{% block title %}
+  Register - JV Sports Edge
+{% endblock %}
+
+{% block content %}
+  <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card p-4 shadow-lg w-100" style="max-width: 500px;">
+      <h2 class="text-center mb-3">Player Registration</h2>
+      <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" name="full_name" required />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Username</label>
+            <input type="text" class="form-control" name="username" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" required />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="text" class="form-control" name="phone" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" name="dob" required />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Select Sport</label>
+            <select class="form-control" name="sport" required>
+              <option value="cricket">Cricket</option>
+              <option value="football">Football</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" required />
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">Register</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

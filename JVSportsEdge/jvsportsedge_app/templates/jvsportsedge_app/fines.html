@@ -1,0 +1,34 @@
+<!-- fines.html -->
+{% extends 'jvsportsedge_app/base.html' %}
+
+{% block title %}
+  Fines - JV Sports Edge
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2>Fines Management</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Reason</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>Late Arrival</td>
+          <td>$20</td>
+          <td>Unpaid</td>
+          <td>
+            <button class="btn btn-success">Mark as Paid</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

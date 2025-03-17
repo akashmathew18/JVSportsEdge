@@ -1,0 +1,32 @@
+{% extends 'jvsportsedge_app/base.html' %}
+
+{% block title %}
+  Team Management - JV Sports Edge
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2>Teams</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Team Name</th>
+          <th>Manager</th>
+          <th>Number of Players</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Team A</td>
+          <td>John Doe</td>
+          <td>15</td>
+          <td>
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

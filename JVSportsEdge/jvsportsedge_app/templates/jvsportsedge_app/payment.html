@@ -1,0 +1,30 @@
+<!-- payments.html -->
+{% extends 'jvsportsedge_app/base.html' %}
+
+{% block title %} Payments - JV Sports Edge {% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2>Payments</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Payment Type</th>
+        <th>Amount</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Registration</td>
+        <td>$50</td>
+        <td>Paid</td>
+        <td>2025-03-13</td>
+        <td><button class="btn btn-info">View Receipt</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'jvsportsedge_app/base.html' %}
+
+{% block title %}
+  Home - JV Sports Edge
+{% endblock %}
+
+{% block content %}
+  <div class="container text-center mt-5">
+    <h1>Welcome to JV Sports Edge</h1>
+    <p>Your ultimate platform for managing teams and players in Cricket and Football.</p>
+
+    {% if user.is_authenticated %}
+      <p>Hello, {{ user.username }}!</p>
+      
+      {% if user.role == "Manager" %}
+        <a href="{% url 'dashboard' %}" class="btn btn-primary">Go to Dashboard</a>
+        <a href="{% url 'teams' %}" class="btn btn-secondary">Manage Teams</a>
+      {% elif user.role == "Player" %}
+        <a href="{% url 'player_profile' user.id %}" class="btn btn-primary">View Profile</a>
+        <a href="{% url 'payments' %}" class="btn btn-secondary">Check Payments</a>
+      {% endif %}
+      
+      <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+    {% else %}
+      <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+      <a href="{% url 'register' %}" class="btn btn-secondary">Register</a>
+    {% endif %}
+  </div>
+{% endblock %}

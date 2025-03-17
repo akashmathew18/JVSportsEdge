@@ -1,0 +1,21 @@
+<!-- player_profile.html -->
+{% extends 'jvsportsedge_app/base.html' %}
+
+{% block title %}
+  Player Profile - JV Sports Edge
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2>Player Profile</h2>
+    <div class="card p-3">
+      <h5>Name: {{ player.name }}</h5>
+      <h5>Age: {{ player.age }}</h5>
+      <h5>Position: {{ player.position }}</h5>
+      <h5>Team: {{ player.team }}</h5>
+      <h5>Registration Status: {{ player.registration_status }}</h5>
+      <h5>Fines: {{ player.fines }}</h5>
+      <a href="{% url 'payments' %}" class="btn btn-primary">Pay Fine</a>
+    </div>
+  </div>
+{% endblock %}
